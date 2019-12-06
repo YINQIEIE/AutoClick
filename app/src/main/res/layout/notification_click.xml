@@ -7,12 +7,14 @@
 
     <TextView
         android:id="@+id/tvService"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:padding="4dp"
+        android:padding="8dp"
         android:text="点击开始模拟点击"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
 
 </LinearLayout>

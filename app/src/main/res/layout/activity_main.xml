@@ -22,13 +22,20 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:text="请输入点击时间间隔（单位：s）:"
+            android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/etTime"
-            android:layout_width="40dp"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
-            tools:text="5" />
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/white"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="3,1"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
 
     </LinearLayout>
 
@@ -45,15 +52,22 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_height="match_parent"
             android:text="请输入点击坐标:"
+            android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/etCoordinates"
-            android:layout_width="40dp"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
-            tools:text="5" />
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/white"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="500,500,700,700,900"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
 
     </LinearLayout>
 
@@ -62,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="坐标以逗号分隔，两两为一对，如：100,200,200,200，则代表（100,200）,(200,200)两队坐标点"
+        android:text="坐标以逗号分隔，两两为一对，如：100,200,200,200，则代表（100,200）,(200,200)两对坐标点"
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@+id/llCoordinate" />
 
