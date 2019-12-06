@@ -103,7 +103,8 @@ public class MyService extends IntentService {
         super.onDestroy();
         doContinue = false;
         notificationManager.cancel(notificationId);
-        stopForeground(true);
+        if (Utils.isVersionAbove(Build.VERSION_CODES.O))
+            stopForeground(true);
     }
 
     /**

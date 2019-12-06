@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AutoClick</string>
+    <string name="app_name">模拟点击</string>
+    <string name="description">模拟点击</string>
 </resources>

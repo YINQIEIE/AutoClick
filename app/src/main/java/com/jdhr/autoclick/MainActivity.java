@@ -17,6 +17,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText etTime;
     private EditText etCoordinates;
-    private Button btnStart;
+    private Button btnStart, btnAccess;
 
     private int notificationId = 0x1000;
     private MyBroadcastReceiver receiver;
@@ -67,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
         etCoordinates = findViewById(R.id.etCoordinates);
         btnStart = findViewById(R.id.btnStart);
         btnStart.setOnClickListener(v -> showNoticeNotification());
+        btnAccess = findViewById(R.id.btnAccess);
+        btnAccess.setOnClickListener(v -> startAccessibility());
+    }
+
+    private void startAccessibility() {
+        Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     private void showNoticeNotification() {
