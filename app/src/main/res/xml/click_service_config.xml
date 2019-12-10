@@ -6,5 +6,5 @@
     android:canRetrieveWindowContent="true"
     android:description="@string/description"
     android:canPerformGestures="true"
-    android:notificationTimeout="100"
+    android:notificationTimeout="1000"
     android:packageNames="com.jdhr.autoclick" />

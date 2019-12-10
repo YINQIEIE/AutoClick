@@ -73,9 +73,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startAccessibility() {
-        Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        if (!Utils.isAccessibilitySettingsOn(this, ClickService.class)) {
+            Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } else
+            Toast.makeText(this, "请打开对应页面", Toast.LENGTH_LONG).show();
     }
 
     private void showNoticeNotification() {
